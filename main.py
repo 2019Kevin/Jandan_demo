@@ -14,7 +14,7 @@ def get_all_links(url):
 
 if __name__ == '__main__':
     pool = Pool(processes=6)
-    links = [seed_url + str(i) for i in range(2368, 2370)]
+    links = [seed_url + str(i) for i in range(1, 1888)]
     pool.map(get_all_links, links)
     client = MongoClient('localhost', 27017, connect=False)
     jiandan = client['jiandan']
